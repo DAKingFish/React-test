@@ -1,5 +1,5 @@
-import { Layout } from 'antd'
-import React from 'react'
+import { Layout, Input } from 'antd'
+import React, { MouseEvent } from 'react'
 import './index.scss'
 // 导入 antd 组件库的样式
 import 'antd/dist/antd.css'
@@ -8,8 +8,13 @@ import logo from '../../assets/2.png'
 const { Header, Sider, Content } = Layout
 
 const Login: React.FC = () => {
-  function changeLogin  = (e:any)=>{
-    
+  function changeLogin(e: MouseEvent<HTMLDivElement>) {
+    e.currentTarget.classList.add('current')
+    if (e.currentTarget.nextSibling) {
+      e.currentTarget.nextElementSibling?.classList.remove('current')
+    } else {
+      e.currentTarget.previousElementSibling?.classList.remove('current')
+    }
   }
   return (
     <div>
@@ -37,8 +42,27 @@ const Login: React.FC = () => {
             <div className="login_select"></div>
             <div className="login_body1">
               <div className="body1_top">
-                <div className="b1_top1" onClick={(e)=>changeLogin(this)}>账号登录</div>
-                <div className="b1_top2">验证码登录</div>
+                <div className="b1_top1 current" onClick={changeLogin}>
+                  账号登录
+                </div>
+                <div className="b1_top2" onClick={changeLogin}>
+                  验证码登录
+                </div>
+                <div className="top_form1">
+                  <Input
+                    placeholder="请输入手机号"
+                    className="ac_number"
+                    bordered={false}
+                  />
+                  <Input.Password
+                    placeholder="请输入密码"
+                    className="ac_password"
+                    bordered={false}
+                  />
+                  <div className="forget_pass">忘记密码</div>
+                  <input type="checkbox" className="isOk" />
+                  <div className="isText">自动登录</div>
+                </div>
               </div>
             </div>
             <div className="login_body2"></div>
