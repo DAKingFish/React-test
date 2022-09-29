@@ -1,4 +1,4 @@
-.disapper {
+.disappear {
   display: none;
 }
 @media screen and (min-width: 1119px), (max-width: 1920px) {
@@ -238,62 +238,174 @@
               border-radius: 2px;
               background-color: #327bf9;
             }
-            .top_form1 {
-              position: absolute;
-              top: 122px;
-              width: 480px;
-              height: 438px;
-              .ac_number {
-                width: 400px;
-                height: 56px;
-                background: #f6f8fb;
-                border-radius: 8px;
-                text-align: 56px;
-                margin-left: 40px;
-                margin-bottom: 32px;
-              }
-              .ac_password {
-                width: 400px;
-                height: 56px;
-                background: #f6f8fb;
-                border-radius: 8px;
-                text-align: 56px;
-                margin-left: 40px;
-              }
-              .forget_pass {
-                position: relative;
-                top: 13px;
-                left: 378px;
-                width: 56px;
-                height: 14px;
-                font-family: PingFangSC-Regular;
-                font-weight: 400;
-                font-size: 14px;
-                color: #777e95;
-                line-height: 14px;
-              }
-              .isOk {
-                position: relative;
-                left: 42px;
-                top: -1px;
-                width: 16px;
-                height: 16px;
-                background: #ffffff;
-                border: 1px solid #dee2ec;
-              }
-              .isText {
-                position: relative;
-                top: -21px;
-                left: 65px;
-                width: 56px;
-                height: 14px;
-                font-family: PingFangSC-Regular;
-                font-weight: 400;
-                font-size: 14px;
-                color: #777e95;
-                line-height: 14px;
-              }
+          }
+          .top_form1 {
+            position: absolute;
+            top: 122px;
+            width: 480px;
+            height: 438px;
+            .ac_number {
+              width: 400px;
+              height: 56px;
+              background: #f6f8fb;
+              border-radius: 8px;
+              text-align: 56px;
+              margin-left: 40px;
+              margin-bottom: 32px;
             }
+            .ac_password {
+              width: 400px;
+              height: 56px;
+              background: #f6f8fb;
+              border-radius: 8px;
+              text-align: 56px;
+              margin-left: 40px;
+            }
+            .forget_pass {
+              position: relative;
+              top: 13px;
+              left: 378px;
+              width: 56px;
+              height: 14px;
+              font-family: PingFangSC-Regular;
+              font-weight: 400;
+              font-size: 14px;
+              color: #777e95;
+              line-height: 14px;
+            }
+            .isOk {
+              position: relative;
+              left: 42px;
+              top: -1px;
+              width: 16px;
+              height: 16px;
+              background: #ffffff;
+              border: 1px solid #dee2ec;
+              cursor: pointer;
+            }
+            .isText {
+              position: relative;
+              top: -22px;
+              left: 65px;
+              width: 56px;
+              height: 14px;
+              font-family: PingFangSC-Regular;
+              font-weight: 400;
+              font-size: 14px;
+              color: #777e95;
+              line-height: 14px;
+            }
+            .ac_loginBut {
+              position: absolute;
+              left: 40px;
+              top: 216px;
+              width: 400px;
+              height: 56px;
+              background: #327bf9;
+              border-radius: 8px;
+              line-height: 56px;
+              text-align: center;
+              font-size: 24px;
+              color: #fff;
+              cursor: pointer;
+            }
+            .ac_sure {
+              position: relative;
+              top: 89px;
+              left: 42px;
+              width: 16px;
+              height: 16px;
+              cursor: pointer;
+            }
+            .sure_text {
+              position: relative;
+              left: 62px;
+              top: 64px;
+              width: 298px;
+              height: 35px;
+              color: #777e95;
+              //text-align: left;
+              vertical-align: middle;
+            }
+          }
+          .top_form2 {
+            position: absolute;
+            top: 122px;
+            width: 480px;
+            height: 438px;
+            .cd_number {
+              width: 400px;
+              height: 56px;
+              background: #f6f8fb;
+              border-radius: 8px;
+              text-align: 56px;
+              margin-left: 40px;
+              margin-bottom: 32px;
+            }
+            .cd_code {
+              width: 400px;
+              height: 56px;
+              background: #f6f8fb;
+              border-radius: 8px;
+              text-align: 56px;
+              margin-left: 40px;
+            }
+            .send_code {
+              position: absolute;
+              top: 105px;
+              right: 60px;
+              height: 22px;
+              font-family: PingFangSC-Regular;
+              font-weight: 400;
+              font-size: 16px;
+              color: #327bf9;
+              text-align: right;
+              cursor: pointer;
+            }
+            .cd_loginBut {
+              position: absolute;
+              left: 40px;
+              top: 216px;
+              width: 400px;
+              height: 56px;
+              background: #327bf9;
+              border-radius: 8px;
+              line-height: 56px;
+              text-align: center;
+              font-size: 24px;
+              color: #fff;
+              cursor: pointer;
+            }
+            .cd_sure {
+              position: relative;
+              top: 177px;
+              left: -400px;
+              width: 16px;
+              height: 16px;
+              cursor: pointer;
+            }
+            .sure_text {
+              position: relative;
+              left: 62px;
+              top: 135px;
+              width: 298px;
+              height: 35px;
+              color: #777e95;
+              //text-align: left;
+              vertical-align: middle;
+            }
+          }
+          .b1_registerBtn {
+            position: absolute;
+            top: 500px;
+            left: 208px;
+            width: 64px;
+            height: 22px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            font-size: 16px;
+            color: #414a64;
+            cursor: pointer;
           }
         }
       }
