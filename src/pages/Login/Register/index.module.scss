@@ -1,0 +1,123 @@
+.register {
+  position: relative;
+  width: 100%;
+  img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .rgTitle {
+    margin: 22px 360px 33px 40px;
+    width: 80px;
+    height: 20px;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    font-size: 20px;
+    color: #111a34;
+    text-align: center;
+    line-height: 20px;
+  }
+  input::-webkit-input-placeholder {
+    color: #a1a7ba;
+  }
+  :global(.ant-input:focus) {
+    box-shadow: none;
+  }
+  .selectContext {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    .rgPhoneNumber,
+    .rgImgCode,
+    .rgCode,
+    .rgPassword {
+      padding: 0 20px;
+      width: 400px;
+      height: 56px;
+      background: #f6f8fb;
+      border-radius: 8px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      font-size: 16px;
+      color: #131314;
+      border: 1px solid #f6f8fb;
+      :global(.ant-input) {
+        font-size: 16px;
+        background: #f6f8fb;
+      }
+      .rgCRequest {
+        height: 22px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        font-size: 16px;
+        color: #327bf9;
+        text-align: right;
+        line-height: 22px;
+        cursor: pointer;
+      }
+    }
+    .rgImgCode {
+      img {
+        position: absolute;
+        top: 9px;
+        right: 10px;
+        width: 130px;
+        height: 38px;
+      }
+    }
+    .rgPassword {
+      img {
+        position: static;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      input {
+        background: #f6f8fb;
+      }
+    }
+    :global(.ant-input-status-error) {
+      background: #f6f8fb !important;
+      border-color: #ff4747;
+      box-shadow: none !important;
+    }
+    :global(.ant-input-affix-wrapper-status-error) {
+      background: #f6f8fb !important;
+      border-color: #ff4747;
+    }
+    :global(.ant-input-affix-wrapper-focused) {
+      box-shadow: none !important;
+    }
+    :global(.ant-input-affix-wrapper:hover) {
+      border: 1px solid #f6f8fb;
+    }
+    .rgLoginButton {
+      width: 400px;
+      height: 56px;
+      background: #327bf9;
+      border-radius: 8px;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      font-size: 16px;
+      color: #ffffff;
+    }
+    .rgAgreements {
+      display: flex;
+      align-self: flex-start;
+      align-items: flex-start;
+      :global(.ant-form-item-control-input-content) {
+        display: flex;
+      }
+      .agreemrntsItem {
+        margin-left: 8px;
+        color: #777e95;
+        :global(.ant-tooltip-inner) {
+          width: 298px;
+        }
+      }
+    }
+  }
+}

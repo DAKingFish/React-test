@@ -1,0 +1,145 @@
+.selectContext {
+  padding: 0 40px;
+}
+
+.selectContext .scPhoneNumber,
+.selectContext .scPassword,
+.selectContext .scCode {
+  padding: 0 20px;
+  width: 400px;
+  height: 56px;
+  background: #f6f8fb;
+  border-radius: 8px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #131314;
+  border: 1px solid #f6f8fb;
+}
+
+.selectContext .scPhoneNumber :global(.ant-input),
+.selectContext .scPassword :global(.ant-input),
+.selectContext .scCode :global(.ant-input) {
+  font-size: 16px;
+  background: #f6f8fb;
+}
+
+.selectContext .scPhoneNumber .mCRequest,
+.selectContext .scPassword .mCRequest,
+.selectContext .scCode .mCRequest {
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #327bf9;
+  text-align: right;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.selectContext :global(.ant-input-status-error) {
+  border-color: #ff4747;
+  background: #f6f8fb !important;
+  box-shadow: none !important;
+}
+
+.selectContext :global(.ant-input-affix-wrapper-status-error) {
+  border-color: #ff4747;
+}
+
+.selectContext .scPhoneNumber:focus,
+.selectContext .scPassword:focus {
+  box-shadow: none !important;
+}
+
+.selectContext :global(.ant-input-affix-wrapper-focused),
+.selectContext :global(.ant-input-affix-wrapper-status-error) {
+  box-shadow: none !important;
+}
+
+.selectContext :global(.ant-input-affix-wrapper:hover) {
+  border: 1px solid #f6f8fb;
+}
+
+.selectContext :global(.ant-input-affix-wrapper-status-error) {
+  background: #f6f8fb !important;
+  border-color: #ff4747;
+}
+
+.selectContext :global(.ant-input-affix-wrapper-focused) {
+  box-shadow: none !important;
+}
+
+.selectContext .scPassword input {
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  background: #f6f8fb;
+  color: #131314;
+}
+
+.selectContext input::-webkit-input-placeholder {
+  color: #a1a7ba;
+}
+
+.selectContext .scPhoneNumber:focus,
+.selectContext .scPassword:focus,
+.selectContext .scCode:focus {
+  box-shadow: none !important;
+}
+
+.selectContext .scMessage {
+  position: relative;
+  color: #7a7b89;
+}
+
+.selectContext .scMessage .forgetPassword {
+  position: absolute;
+  top: -18px;
+  right: 2px;
+  width: 56px;
+  height: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 14px;
+  color: #777e95;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.selectContext .scMessage .messageCodeBtn {
+  position: absolute;
+  top: -71px;
+  right: 20px;
+  width: 80px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #327bf9;
+  text-align: right;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.selectContext .scLoginButton {
+  width: 400px;
+  height: 56px;
+  background: #327bf9;
+  border-radius: 8px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.selectContext .scAgreements {
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.selectContext .scAgreements .agreemrntsItem {
+  margin-left: 8px;
+  color: #777e95;
+}

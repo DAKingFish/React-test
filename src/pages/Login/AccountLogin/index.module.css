@@ -1,0 +1,175 @@
+.selectContext {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.selectContext .scPhoneNumber,
+.selectContext .scPassword,
+.selectContext .scCode {
+  padding: 0 20px;
+  width: 400px;
+  height: 56px;
+  background: #f6f8fb;
+  border-radius: 8px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #131314;
+  border: 1px solid #f6f8fb;
+}
+
+.selectContext :global(.ant-input-status-error) {
+  background: #f6f8fb !important;
+  border-color: #ff4747;
+}
+
+.selectContext :global(.ant-input-affix-wrapper-status-error) {
+  background: #f6f8fb !important;
+  border-color: #ff4747;
+}
+
+.selectContext .scPhoneNumber:focus,
+.selectContext .scPassword:focus,
+.selectContext .scCode:focus {
+  box-shadow: none !important;
+}
+
+.selectContext :global(.ant-input-affix-wrapper-focused) {
+  box-shadow: none !important;
+}
+
+.selectContext :global(.ant-input-affix-wrapper:hover) {
+  border: 1px solid #f6f8fb;
+}
+
+.selectContext .scPassword img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.selectContext .scPassword input {
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  background: #f6f8fb;
+  color: #131314;
+}
+
+.selectContext input::-webkit-input-placeholder {
+  color: #a1a7ba;
+}
+
+.selectContext .scForget,
+.selectContext .scMessage {
+  position: relative;
+  color: #7a7b89;
+}
+
+.selectContext .scForget .forgetPassword,
+.selectContext .scMessage .forgetPassword {
+  position: absolute;
+  top: -18px;
+  right: 2px;
+  width: 56px;
+  height: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 14px;
+  color: #777e95;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.selectContext .scForget .messageCodeBtn,
+.selectContext .scMessage .messageCodeBtn {
+  position: absolute;
+  top: -71px;
+  right: 20px;
+  width: 80px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #327bf9;
+  text-align: right;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.selectContext .scLoginButton {
+  width: 400px;
+  height: 56px;
+  background: #327bf9;
+  border-radius: 8px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.selectContext .scAgreements {
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.selectContext .scAgreements :global(.ant-form-item-control-input-content) {
+  display: flex;
+}
+
+.selectContext .scAgreements .agreemrntsItem {
+  margin-left: 8px;
+  color: #777e95;
+}
+
+:global(.ant-tooltip-inner) {
+  position: relative;
+  padding: 16px 20px;
+  top: 5px;
+  left: 85px;
+  width: 298px;
+  height: 54px;
+  background: #ffffff;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1), 0 8px 10px 1px rgba(0, 0, 0, 0.06), 0 3px 14px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 15px;
+  color: #414a64;
+  line-height: 22px;
+}
+
+:global(.ant-tooltip-arrow-content) {
+  top: 9px;
+}
+
+:global(.ant-tooltip-arrow-content::before) {
+  background: #fff;
+}
+
+.accountCheck {
+  height: 100%;
+  width: 16px;
+}
+
+.accountRegister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 38px;
+}
+
+.accountRegister .registerItem {
+  width: 64px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #414a64;
+  cursor: pointer;
+}
