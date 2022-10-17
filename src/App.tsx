@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './App.scss'
 //导入路由组件
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -9,14 +9,6 @@ import Homework from './pages/Homework'
 import NotFound from './pages/NotFound'
 
 function App() {
-  useEffect(() => {
-    // send
-    // 1. axios
-    // 2. fetch
-    fetch('http://127.0.0.1:3000/api/user.json', {}).then(async (res) => {
-      console.log(await res.json())
-    })
-  }, [])
   return (
     <Router>
       <div className="App">
