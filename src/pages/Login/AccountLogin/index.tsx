@@ -2,8 +2,8 @@ import styles from './index.module.scss'
 import { Button, Checkbox, Form, Input, ConfigProvider, Tooltip } from 'antd'
 import type { CheckboxChangeEvent } from 'antd/es/checkbox'
 import { useEffect, useState } from 'react'
-import eye from '@/assets/eye.png'
-import eyeclose from '@/assets/eye-close.png'
+import eye from '@/assets/images/eye.png'
+import eyeclose from '@/assets/images/eye-close.png'
 
 console.log(styles)
 export default function AccountLogin(props: any) {
@@ -16,8 +16,8 @@ export default function AccountLogin(props: any) {
   }
   const onChangeAc = (e: CheckboxChangeEvent) => {
     setValue(e.target.checked)
-    setLoginErr(false)
-    console.log(`checked = ${e.target.checked}`)
+    setLoginErr(false) //setLoginErr的设置 直接validator来进行重新赋值
+    console.log(`checked = ${e.target.checked}`) //这是自己看看的,实际开发时要取消
   }
   return (
     <Form className={styles.selectContext} onFinish={onFinishAc} form={form}>

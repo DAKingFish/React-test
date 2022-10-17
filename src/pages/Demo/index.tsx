@@ -3,8 +3,8 @@ import React, { MouseEvent, useState } from 'react'
 import './index.scss'
 // 导入 antd 组件库的样式
 import 'antd/dist/antd.css'
-import backimg from '../../assets/1.png'
-import logo from '../../assets/2.png'
+import backimg from '../../assets/images/1.png'
+import logo from '../../assets/images/2.png'
 const { Header, Sider, Content } = Layout
 
 const Demo: React.FC = () => {

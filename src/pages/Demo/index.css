@@ -1,0 +1,479 @@
+.disappear {
+  display: none;
+}
+
+@media screen and (min-width: 1119px), (max-width: 1920px) {
+  .login {
+    width: 100%;
+    height: 100vh;
+    min-width: 1120px;
+    max-width: 1920px;
+  }
+  .login .login_left {
+    width: 560px;
+    height: 100%;
+    background-image: url(../../assets/images/login-logo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .login .login_left .l_left_top {
+    width: 200px;
+    height: 84px;
+    margin: 8.5% 180px;
+    text-align: center;
+  }
+  .login .login_left .l_left_top img {
+    width: 70%;
+  }
+  .login .login_left .l_left_middle img {
+    position: absolute;
+    left: 10%;
+    width: 560px;
+    top: 24.5%;
+    width: 80%;
+  }
+  .login .login_right {
+    position: relative;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    min-height: 684px;
+  }
+  .login .login_right .go_main {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    height: 22px;
+    padding: 0;
+    line-height: 22px;
+    background: #fff;
+  }
+  .login .login_right .go_main a {
+    width: 64px;
+    height: 22px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 16px;
+    color: #414a64;
+  }
+  .login .login_right .login_body {
+    position: relative;
+    left: 50%;
+    top: 402px;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 620px;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .login .login_right .login_body .login_tab {
+    position: absolute;
+    top: 0;
+    width: 224px;
+    height: 32px;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    font-size: 32px;
+    color: #111a34;
+    line-height: 32px;
+  }
+  .login .login_right .login_body .login_select {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../../assets/images/3.png);
+    background-size: cover;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 {
+    position: absolute;
+    top: 80px;
+    width: 480px;
+    height: 560px;
+    background: #ffffff;
+    box-shadow: 0 0 18px 0 rgba(132, 158, 192, 0.21);
+    border-radius: 12px;
+  }
+  .login .login_right .login_body .login_body1 .body1_top {
+    display: flex;
+    position: relative;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top1 {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 20px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 20px;
+    color: #a1a7ba;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top1::after {
+    position: absolute;
+    display: none;
+    content: '';
+    top: 26px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #327bf9;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top2 {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 20px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 20px;
+    color: #a1a7ba;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top2::after {
+    display: none;
+    content: '';
+  }
+  .login .login_right .login_body .login_body1 .body1_top .current {
+    color: #111a34;
+    font-weight: 500;
+    font-family: PingFangSC-Medium;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .current::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 26px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #327bf9;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 {
+    position: absolute;
+    top: 122px;
+    width: 480px;
+    height: 438px;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .ac_number {
+    width: 400px;
+    height: 56px;
+    background: #f6f8fb;
+    border-radius: 8px;
+    text-align: 56px;
+    margin-left: 40px;
+    margin-bottom: 32px;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .ac_password {
+    width: 400px;
+    height: 56px;
+    background: #f6f8fb;
+    border-radius: 8px;
+    text-align: 56px;
+    margin-left: 40px;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .forget_pass {
+    position: relative;
+    top: 13px;
+    left: 378px;
+    width: 56px;
+    height: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777e95;
+    line-height: 14px;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .isOk {
+    position: relative;
+    left: 42px;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 1px solid #dee2ec;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .isText {
+    position: relative;
+    top: -22px;
+    left: 65px;
+    width: 56px;
+    height: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777e95;
+    line-height: 14px;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .ac_loginBut {
+    position: absolute;
+    left: 40px;
+    top: 216px;
+    width: 400px;
+    height: 56px;
+    background: #327bf9;
+    border-radius: 8px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .ac_sure {
+    position: relative;
+    top: 89px;
+    left: 42px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .top_form1 .sure_text {
+    position: relative;
+    left: 62px;
+    top: 64px;
+    width: 298px;
+    height: 35px;
+    color: #777e95;
+    vertical-align: middle;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 {
+    position: absolute;
+    top: 122px;
+    width: 480px;
+    height: 438px;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 .cd_number {
+    width: 400px;
+    height: 56px;
+    background: #f6f8fb;
+    border-radius: 8px;
+    text-align: 56px;
+    margin-left: 40px;
+    margin-bottom: 32px;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 .cd_code {
+    width: 400px;
+    height: 56px;
+    background: #f6f8fb;
+    border-radius: 8px;
+    text-align: 56px;
+    margin-left: 40px;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 .send_code {
+    position: absolute;
+    top: 105px;
+    right: 60px;
+    height: 22px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 16px;
+    color: #327bf9;
+    text-align: right;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 .cd_loginBut {
+    position: absolute;
+    left: 40px;
+    top: 216px;
+    width: 400px;
+    height: 56px;
+    background: #327bf9;
+    border-radius: 8px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 .cd_sure {
+    position: relative;
+    top: 177px;
+    left: -400px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .top_form2 .sure_text {
+    position: relative;
+    left: 62px;
+    top: 135px;
+    width: 298px;
+    height: 35px;
+    color: #777e95;
+    vertical-align: middle;
+  }
+  .login .login_right .login_body .login_body1 .b1_registerBtn {
+    position: absolute;
+    top: 500px;
+    left: 208px;
+    width: 64px;
+    height: 22px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 16px;
+    color: #414a64;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1120px), (max-height: 684px) {
+  .login {
+    width: 100%;
+    height: 100%;
+    min-height: 684px;
+  }
+  .login .ant-layout-sider,
+  .login .ant-layout-sider-dark {
+    display: none;
+  }
+  .login .login_left {
+    display: none;
+    width: 560px;
+    height: 100%;
+    background-image: url(../../assets/images/login-logo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .login .login_left .l_left_top {
+    width: 200px;
+    height: 84px;
+    margin: 8.5% 180px;
+    text-align: center;
+  }
+  .login .login_left .l_left_top img {
+    width: 70%;
+  }
+  .login .login_left .l_left_middle img {
+    position: absolute;
+    left: 10%;
+    width: 560px;
+    top: 24.5%;
+    width: 80%;
+  }
+  .login .login_right {
+    position: relative;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    min-height: 684px;
+  }
+  .login .login_right .go_main {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    height: 22px;
+    padding: 0;
+    line-height: 22px;
+    background: #fff;
+  }
+  .login .login_right .go_main a {
+    width: 64px;
+    height: 22px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 16px;
+    color: #414a64;
+  }
+  .login .login_right .login_body {
+    position: relative;
+    left: 50%;
+    top: 402px;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 620px;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .login .login_right .login_body .login_tab {
+    position: absolute;
+    top: 0;
+    width: 224px;
+    height: 32px;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    font-size: 32px;
+    color: #111a34;
+    line-height: 32px;
+  }
+  .login .login_right .login_body .login_body1 {
+    position: absolute;
+    top: 80px;
+    width: 480px;
+    height: 560px;
+    background: #ffffff;
+    box-shadow: 0 0 18px 0 rgba(132, 158, 192, 0.21);
+    border-radius: 12px;
+  }
+  .login .login_right .login_body .login_body1 .body1_top {
+    display: flex;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top1 {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 20px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 20px;
+    color: #a1a7ba;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top1::after {
+    position: absolute;
+    display: none;
+    content: '';
+    top: 26px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #327bf9;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top2 {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 20px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 20px;
+    color: #a1a7ba;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .b1_top2::after {
+    display: none;
+    content: '';
+  }
+  .login .login_right .login_body .login_body1 .body1_top .current {
+    color: #111a34;
+    font-weight: 500;
+    font-family: PingFangSC-Medium;
+  }
+  .login .login_right .login_body .login_body1 .body1_top .current::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 26px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #327bf9;
+  }
+}
