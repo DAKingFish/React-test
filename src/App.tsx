@@ -17,6 +17,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/demo" component={Demo} />
           <Route path="/test" component={Homework} />
+          <Route path="/h" component={Layout} />
           {/* 增加一个404 */}
           <Route component={NotFound} />
         </Switch>
