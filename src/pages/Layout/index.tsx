@@ -11,8 +11,9 @@ import phome from '@/assets/images/首页.svg'
 import pclub from '@/assets/images/线索中心.svg'
 import ptalk from '@/assets/images/拓客.svg'
 import pcrm from '@/assets/images/智能CRM.svg'
+import pchuda from '@/assets/images/普通触达.svg'
 import pstatement from '@/assets/images/报表中心.svg'
-import { MenuProps, message } from 'antd'
+import { MenuProps } from 'antd'
 import { Breadcrumb, Layout, Menu, Input, Badge } from 'antd'
 import { createFromIconfontCN } from '@ant-design/icons'
 import React, { useState } from 'react'
@@ -21,6 +22,31 @@ const { Header, Content, Sider } = Layout
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/c/font_1685288_njw37wgpnml.js',
 })
+type MenuItem = Required<MenuProps>['items'][number]
+
+function getItem(
+  label: React.ReactNode,
+  key?: React.Key | null,
+  icon?: React.ReactNode,
+  children?: MenuItem[]
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label,
+  } as MenuItem
+}
+const items: MenuItem[] = [
+  getItem('首页', '1', <img src={phome} alt="首页" />),
+  getItem('线索', '2', <img src={pclub} alt="线索" />),
+  getItem('拓客', '3', <img src={ptalk} alt="拓客" />),
+  getItem('CRM', '4', <img src={pcrm} alt="crm" />),
+  getItem('触达', '5', <img src={pchuda} alt="触达" />),
+  getItem('培育', '6', <img src={pchuda} alt="培育" />),
+  getItem('报表', '7', <img src={pstatement} alt="报表" />),
+  getItem('管理', '8', <img src={pchuda} alt="管理" />),
+]
 const items2: MenuProps['items'] = [
   UserOutlined,
   LaptopOutlined,
@@ -43,7 +69,10 @@ const items2: MenuProps['items'] = [
   }
 })
 const LayoutHome = () => {
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
+  const [pitem, setPitem] = useState('')
+  const [eitem, setEitem] = useState('')
+  const [sitem, setSitem] = useState('')
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Header
@@ -89,12 +118,23 @@ const LayoutHome = () => {
           className={styles.sider}
           collapsed={collapsed}
           style={{
-            height: '650',
             position: 'fixed',
             left: 0,
             bottom: 0,
           }}
         >
+          <Menu
+            className={styles.siderMenu}
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
+            style={{ height: '100%', borderRight: 0 }}
+            items={items}
+            onClick={(e) => {
+              console.log(items[Number(e.key) - 1])
+              setPitem((items[Number(e.key) - 1] as any).label)
+            }}
+          />
           <button
             onClick={() => {
               setCollapsed(!collapsed)
@@ -105,6 +145,9 @@ const LayoutHome = () => {
         </Sider>
         <Content className={styles.content}>
           <Sider width={200} className="site-layout-background">
+            <div className={styles.contentTitle}>
+              {pitem === '' ? '首页' : pitem}
+            </div>
             <Menu
               mode="inline"
               defaultSelectedKeys={['1']}
@@ -115,9 +158,13 @@ const LayoutHome = () => {
           </Sider>
           <Layout style={{ padding: '0 24px 24px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>Home</Breadcrumb.Item>
-              <Breadcrumb.Item>List</Breadcrumb.Item>
-              <Breadcrumb.Item>App</Breadcrumb.Item>
+              <Breadcrumb.Item>{pitem === '' ? '首页' : pitem}</Breadcrumb.Item>
+              <Breadcrumb.Item>
+                {eitem === '' ? '首页功能选项' : eitem}
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                {sitem === '' ? '首页的具体功能' : sitem}
+              </Breadcrumb.Item>
             </Breadcrumb>
             <Content
               className="site-layout-background"
