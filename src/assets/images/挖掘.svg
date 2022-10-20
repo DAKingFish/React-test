@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+  <title>挖掘@3x</title>
+  <g id="B端产品拆分线索云导航" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round">
+    <g id="默认icon" transform="translate(-20.000000, -70.000000)" fill-rule="nonzero" stroke-width="1.575">
+      <g id="挖掘" transform="translate(0.000000, 56.000000)">
+        <g transform="translate(20.000000, 14.000000)" id="编组">
+          <g transform="translate(2.000000, 2.000000)">
+            <path d="M3.86398926,5.56799316 C3.43998928,6.27999315 3.2,7.11199999 3.2,8 C3.2,10.648 5.35200005,12.8 8,12.8 C10.648,12.8 12.8,10.648 12.8,8 C12.8,5.35200005 10.648,3.2 8,3.2 C7.27199998,3.2 6.57600975,3.36000586 5.96000977,3.65600586" id="Vector" stroke="#327BF9"></path>
+            <path d="M3.2,1.6 C4.53599997,0.6 6.2,0 8,0 C12.416,0 16,3.58400002 16,8 C16,12.416 12.416,16 8,16 C3.58400002,16 0,12.416 0,8 C0,6.55200005 0.383989239,5.19199123 1.06398926,4.01599121 L8,8" id="Vector" stroke="#414A64"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

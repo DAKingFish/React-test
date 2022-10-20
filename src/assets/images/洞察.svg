@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+  <title>洞察@3x</title>
+  <g id="B端产品拆分线索云导航" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round">
+    <g id="默认icon" transform="translate(-20.000000, -18.000000)">
+      <g id="洞察" transform="translate(0.000000, 4.000000)">
+        <g transform="translate(20.000000, 14.000000)" id="编组-10">
+          <g transform="translate(2.000000, 2.875000)">
+            <path d="M13.7119995,13.6 C15.1279995,12.16 16,10.176 16,8 C16,3.58400002 12.416,0 8,0 C3.58400002,0 0,3.58400002 0,8 C0,10.176 0.863997078,12.1439999 2.27199707,13.5919998" id="Vector" stroke="#414A64" stroke-width="1.575" fill-rule="nonzero"></path>
+            <path d="M7.99931641,15.2001877 C6.50593843,15.2001877 5.2953125,13.9895663 5.2953125,12.4961884 C5.2953125,11.0028104 6.50593843,9.7921875 7.99931641,9.7921875 C9.49269438,9.7921875 10.7033203,11.0028104 10.7033203,12.4961884 C10.7033203,13.9895663 9.49269438,15.2001877 7.99931641,15.2001877 Z" id="Vector" stroke="#327BF9" stroke-width="1.575"></path>
+            <path d="M11.2,7.6 C11.8,7.6 12.4,7.06399999 12.4,6.4 C12.4,5.74400001 11.856,5.2 11.2,5.2 C10.544,5.2 10,5.73600001 10,6.4 C10,7.06399999 10.6,7.6 11.2,7.6 Z" id="Vector" stroke="#327BF9" stroke-width="1.125" fill-rule="nonzero"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

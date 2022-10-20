@@ -1,50 +1,49 @@
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
   SearchOutlined,
+  LaptopOutlined,
+  NotificationOutlined,
+  UserOutlined,
 } from '@ant-design/icons'
 import logo from '@/assets/images/logo@2x.png'
 import view1 from '@/assets/images/触达.svg'
-import type { MenuProps } from 'antd'
-import { Breadcrumb, Layout, Menu, Input } from 'antd'
+import plogo from '@/assets/images/icon.png'
+import phome from '@/assets/images/首页.svg'
+import pclub from '@/assets/images/线索中心.svg'
+import ptalk from '@/assets/images/拓客.svg'
+import pcrm from '@/assets/images/智能CRM.svg'
+import pstatement from '@/assets/images/报表中心.svg'
+import { MenuProps, message } from 'antd'
+import { Breadcrumb, Layout, Menu, Input, Badge } from 'antd'
+import { createFromIconfontCN } from '@ant-design/icons'
 import React, { useState } from 'react'
 import styles from './index.module.scss'
 const { Header, Content, Sider } = Layout
+const IconFont = createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/c/font_1685288_njw37wgpnml.js',
+})
+const items2: MenuProps['items'] = [
+  UserOutlined,
+  LaptopOutlined,
+  NotificationOutlined,
+].map((icon, index) => {
+  const key = String(index + 1)
 
+  return {
+    key: `sub${key}`,
+    icon: React.createElement(icon),
+    label: `subnav ${key}`,
+
+    children: new Array(4).fill(null).map((_, j) => {
+      const subKey = index * 4 + j + 1
+      return {
+        key: subKey,
+        label: `option${subKey}`,
+      }
+    }),
+  }
+})
 const LayoutHome = () => {
   const [collapsed, setCollapsed] = useState(false)
-  type MenuItem = Required<MenuProps>['items'][number]
-  function getItem(
-    label: React.ReactNode,
-    key: React.Key,
-    icon?: React.ReactNode,
-    children?: MenuItem[]
-  ): MenuItem {
-    return {
-      key,
-      icon,
-      children,
-      label,
-    } as MenuItem
-  }
-
-  const items: MenuItem[] = [
-    getItem('Option 1', '1', <PieChartOutlined />),
-    getItem('Option 2', '2', <DesktopOutlined />),
-    getItem('User', 'sub1', <UserOutlined />, [
-      getItem('Tom', '3'),
-      getItem('Bill', '4'),
-      getItem('Alex', '5'),
-    ]),
-    getItem('Team', 'sub2', <TeamOutlined />, [
-      getItem('Team 1', '6'),
-      getItem('Team 2', '8'),
-    ]),
-    getItem('Files', '9', <FileOutlined />),
-  ]
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Header
@@ -62,40 +61,76 @@ const LayoutHome = () => {
           />
           <br />
           <div className={styles.headerMenu}>
-            <div>{view1}使用指南</div>
+            <div>
+              <IconFont type="icon-biaodanyemian" />
+              使用指南
+            </div>
+            <div>
+              <IconFont type="icon-icon_function_daorudaochu" />
+              导入导出
+            </div>
+            <div>
+              <Badge count={1} size={'small'}>
+                <IconFont type="icon-lingdang" />
+              </Badge>
+              消息
+            </div>
+            <div>
+              <span>
+                <img src={plogo} alt="头像" className={styles.pLogo} />
+              </span>
+              金圆
+            </div>
           </div>
         </div>
       </Header>
-      <Layout style={{ marginTop: '64px' }}>
+      <Layout style={{ marginTop: '64px' }} className={styles.main}>
         <Sider
-          width={100}
-          theme="light"
-          collapsible
+          className={styles.sider}
           collapsed={collapsed}
-          onCollapse={(value) => setCollapsed(value)}
+          style={{
+            height: '650',
+            position: 'fixed',
+            left: 0,
+            bottom: 0,
+          }}
         >
-          <div className="logo" />
-          <Menu
-            theme="light"
-            defaultSelectedKeys={['1']}
-            mode="inline"
-            items={items}
-          />
+          <button
+            onClick={() => {
+              setCollapsed(!collapsed)
+            }}
+          >
+            <IconFont type="icon-a-zuosuojin3x" />
+          </button>
         </Sider>
-        <Layout className="site-layout">
-          <Content style={{ margin: '0 16px' }}>
+        <Content className={styles.content}>
+          <Sider width={200} className="site-layout-background">
+            <Menu
+              mode="inline"
+              defaultSelectedKeys={['1']}
+              defaultOpenKeys={['sub1']}
+              style={{ height: '100%', borderRight: 0 }}
+              items={items2}
+            />
+          </Sider>
+          <Layout style={{ padding: '0 24px 24px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
+              <Breadcrumb.Item>Home</Breadcrumb.Item>
+              <Breadcrumb.Item>List</Breadcrumb.Item>
+              <Breadcrumb.Item>App</Breadcrumb.Item>
             </Breadcrumb>
-            <div
+            <Content
               className="site-layout-background"
-              style={{ padding: 24, minHeight: 360 }}
+              style={{
+                padding: 24,
+                margin: 0,
+                minHeight: 280,
+              }}
             >
-              Bill is a cat.
-            </div>
-          </Content>
-        </Layout>
+              Content
+            </Content>
+          </Layout>
+        </Content>
       </Layout>
     </Layout>
   )

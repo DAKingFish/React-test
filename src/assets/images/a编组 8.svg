@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+  <title>编组 8@1x</title>
+  <g id="B端产品拆分线索云导航" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round">
+    <g id="选中icon" transform="translate(-20.000000, -222.000000)" fill-rule="nonzero" stroke="#327BF9">
+      <g id="协同" transform="translate(8.000000, 208.000000)">
+        <g id="编组-8" transform="translate(12.000000, 14.000000)">
+          <g id="编组-10" transform="translate(2.000000, 2.000000)">
+            <path d="M12.9105175,5.39660829 C14.7440326,6.31427895 16.0002495,8.20955905 16.0002495,10.3998596 C16.0002495,13.4958595 13.4962502,15.9998596 10.4002502,15.9998596 C8.32529867,15.9998596 6.51511215,14.8724724 5.55001664,13.1949033" id="路径" stroke-width="1.4"></path>
+            <path d="M5.6,11.2 C5.34400001,11.2 5.09599977,11.1840002 4.85599976,11.1440002 C2.1119997,10.7840003 0,8.43999996 0,5.6 C0,2.50400009 2.50400009,0 5.6,0 C8.43999996,0 10.7839995,2.1119997 11.1439995,4.85599976 C11.1839995,5.09599977 11.2,5.34400001 11.2,5.6 C11.2,8.69599991 8.69599991,11.2 5.6,11.2 Z" id="Vector" stroke-width="1.6" fill="#327BF9"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
