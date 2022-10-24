@@ -3,6 +3,7 @@ import { Button, Checkbox, Form, Input, ConfigProvider, Tooltip } from 'antd'
 import type { CheckboxChangeEvent } from 'antd/es/checkbox'
 import { CheckCircleOutlined } from '@ant-design/icons'
 import { useEffect, useState } from 'react'
+import { useTimer } from '@/utils/useTimer'
 export default function Forget(props: any) {
   const [moudle, setMoudle] = useState('')
   const [second, setSecond] = useState(61)
@@ -12,6 +13,7 @@ export default function Forget(props: any) {
     console.log('Success:', values)
   }
   const [form] = Form.useForm()
+  const { time, run } = useTimer()
   const [rqcode, setRqcode] = useState(false) //控制短信验证文案
   useEffect(() => {
     if (second < 61 && second >= 0) {
@@ -106,7 +108,16 @@ export default function Forget(props: any) {
             maxLength={4}
             placeholder={'请输入短信验证码'}
             value={code}
-            suffix={<div className={styles.fgCRequest}>获取验证码</div>}
+            suffix={
+              <div
+                className={time > 0 ? styles.fgNCRequest : styles.fgCRequest}
+                onClick={() => {
+                  run(60)
+                }}
+              >
+                {time > 0 ? time + 's' : '获取验证码'}
+              </div>
+            }
           />
         </Form.Item>
         <Form.Item

@@ -1,7 +1,16 @@
 import styles from './index.module.scss'
-import { Button, Checkbox, Form, Input, ConfigProvider, Tooltip } from 'antd'
+import {
+  Button,
+  Checkbox,
+  Form,
+  Input,
+  ConfigProvider,
+  Tooltip,
+  message,
+} from 'antd'
 import type { CheckboxChangeEvent } from 'antd/es/checkbox'
 import { useEffect, useState } from 'react'
+import { login } from '@/api/use'
 import eye from '@/assets/images/eye.png'
 import eyeclose from '@/assets/images/eye-close.png'
 
@@ -11,14 +20,42 @@ export default function AccountLogin(props: any) {
   const [value, setValue] = useState(false) //是否同意协议
   const [form] = Form.useForm()
   console.log(form)
-  const onFinishAc = (values: any) => {
-    console.log('Success', values)
+  /*  const onFinishAc = async (values: any) => {
+    const res = await login(values)
+    if(values.)
+    try {
+      localStorage.setItem('user_token', res.data.token) //自建服务器要给token
+      props.history.push('/h')
+      message.success('登录成功')
+    } catch (err) {
+      message.error('登录失败')
+    }
+  } */
+  const onFinishAc = async (values: any) => {
+    const res: any = await login(values)
+    console.log('res->', res.data[0])
+    if (
+      res.data[0].phonenumber === Number(values.acphonenumber) ||
+      res.data[0].password === Number(values.password)
+    ) {
+      message.success('登录成功')
+      try {
+        localStorage.setItem('user_token', res.data[0].token) //自建服务器要给token
+        //props.history.push('/h')  我的app页面没有加history属性
+        window.location.href = '/h'
+      } catch (error) {
+        message.error('成功未执行')
+      }
+    } else {
+      message.error('登录失败')
+    }
   }
   const onChangeAc = (e: CheckboxChangeEvent) => {
     setValue(e.target.checked)
     setLoginErr(false) //setLoginErr的设置 直接validator来进行重新赋值
     console.log(`checked = ${e.target.checked}`) //这是自己看看的,实际开发时要取消
   }
+
   return (
     <Form className={styles.selectContext} onFinish={onFinishAc} form={form}>
       <Form.Item

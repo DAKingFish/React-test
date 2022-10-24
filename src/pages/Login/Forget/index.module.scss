@@ -1,6 +1,7 @@
 .register {
   position: relative;
   width: 100%;
+
   img {
     position: absolute;
     width: 24px;
@@ -9,6 +10,7 @@
     right: 20px;
     cursor: pointer;
   }
+
   .rgTitle {
     margin: 22px 360px 33px 40px;
     width: 80px;
@@ -20,16 +22,20 @@
     text-align: center;
     line-height: 20px;
   }
+
   input::-webkit-input-placeholder {
     color: #a1a7ba;
   }
+
   :global(.ant-input:focus) {
     box-shadow: none;
   }
+
   .selectContext {
     display: flex;
     flex-direction: column;
     padding: 0 40px;
+
     .fgPhoneNumber,
     .fgImgCode,
     .fgCode,
@@ -44,10 +50,12 @@
       font-size: 16px;
       color: #131314;
       border: 1px solid #f6f8fb;
+
       :global(.ant-input) {
         font-size: 16px;
         background: #f6f8fb;
       }
+
       .fgCRequest {
         height: 22px;
         font-family: PingFangSC-Regular;
@@ -58,7 +66,19 @@
         line-height: 22px;
         cursor: pointer;
       }
+
+      .fgNCRequest {
+        height: 22px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        font-size: 16px;
+        color: #327bf9;
+        text-align: right;
+        line-height: 22px;
+        pointer-events: none;
+      }
     }
+
     .fgImgCode {
       img {
         position: absolute;
@@ -68,6 +88,7 @@
         height: 38px;
       }
     }
+
     .fgPassword {
       img {
         position: static;
@@ -75,25 +96,31 @@
         height: 20px;
         cursor: pointer;
       }
+
       input {
         background: #f6f8fb;
       }
     }
+
     :global(.ant-input-status-error) {
       background: #f6f8fb !important;
       border-color: #ff4747;
       box-shadow: none !important;
     }
+
     :global(.ant-input-affix-wrapper-status-error) {
       background: #f6f8fb !important;
       border-color: #ff4747;
     }
+
     :global(.ant-input-affix-wrapper-focused) {
       box-shadow: none !important;
     }
+
     :global(.ant-input-affix-wrapper:hover) {
       border: 1px solid #f6f8fb;
     }
+
     .fgLoginButton {
       width: 400px;
       height: 56px;
@@ -104,16 +131,20 @@
       font-size: 16px;
       color: #ffffff;
     }
+
     .fgAgreements {
       display: flex;
       align-self: flex-start;
       align-items: flex-start;
+
       :global(.ant-form-item-control-input-content) {
         display: flex;
       }
+
       .agreemrntsItem {
         margin-left: 8px;
         color: #777e95;
+
         :global(.ant-tooltip-inner) {
           width: 298px;
         }

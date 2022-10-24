@@ -76,6 +76,20 @@
   cursor: pointer;
 }
 
+.register .selectContext .fgPhoneNumber .fgNCRequest,
+.register .selectContext .fgImgCode .fgNCRequest,
+.register .selectContext .fgCode .fgNCRequest,
+.register .selectContext .fgPassword .fgNCRequest {
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  color: #327bf9;
+  text-align: right;
+  line-height: 22px;
+  pointer-events: none;
+}
+
 .register .selectContext .fgImgCode img {
   position: absolute;
   top: 9px;
