@@ -35,7 +35,7 @@ export default function AccountLogin(props: any) {
     const res: any = await login(values)
     console.log('res->', res.data[0])
     if (
-      res.data[0].phonenumber === Number(values.acphonenumber) ||
+      res.data[0].phonenumber === Number(values.acphonenumber) &&
       res.data[0].password === Number(values.password)
     ) {
       message.success('登录成功')
