@@ -67,13 +67,14 @@
 }
 
 .main {
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 .main .sider {
   position: relative !important;
-  height: calc(100vh - 64px);
-  min-height: 450px;
   width: 140px !important;
   min-width: 100px !important;
   max-width: 140px !important;
@@ -103,14 +104,13 @@
   opacity: 1;
 }
 
-.main .sider button {
+.main .sider .showMenus {
   position: absolute;
   left: 20px;
   bottom: 16px;
   width: 20px;
   height: 20px;
   background-color: #eaf2ff;
-  cursor: pointer;
 }
 
 .main .content {

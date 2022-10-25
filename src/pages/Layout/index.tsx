@@ -5,14 +5,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons'
 import logo from '@/assets/images/logo@2x.png'
-// import view1 from '@/assets/images/触达.svg'
 import plogo from '@/assets/images/icon.png'
-// import phome from '@/assets/images/首页.svg'
-// import pclub from '@/assets/images/线索中心.svg'
-// import ptalk from '@/assets/images/拓客.svg'
-// import pcrm from '@/assets/images/智能CRM.svg'
-// import pchuda from '@/assets/images/普通触达.svg'
-// import pstatement from '@/assets/images/报表中心.svg'
 import { MenuProps } from 'antd'
 import { Breadcrumb, Layout, Menu, Input, Badge } from 'antd'
 import { createFromIconfontCN } from '@ant-design/icons'
@@ -21,35 +14,8 @@ import { useMenus } from '@/utils/menus'
 import styles from './index.module.scss'
 const { Header, Content, Sider } = Layout
 const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/c/font_1685288_njw37wgpnml.js',
+  scriptUrl: '//at.alicdn.com/t/c/font_1685288_3z4k917vg9t.js',
 })
-
-// type MenuItem = Required<MenuProps>['items'][number]
-
-// function getItem(
-//   label: React.ReactNode,
-//   key?: React.Key | null,
-//   icon?: React.ReactNode,
-//   children?: MenuItem[]
-// ): MenuItem {
-//   return {
-//     key,
-//     icon,
-//     children,
-//     label,
-//   } as MenuItem
-// }
-// const items: MenuItem[] = [
-//   getItem('首页', '1', <img src={phome} alt="首页" />),
-//   getItem('线索', '2', <img src={pclub} alt="线索" />),
-//   getItem('拓客', '3', <img src={ptalk} alt="拓客" />),
-//   getItem('CRM', '4', <img src={pcrm} alt="crm" />),
-//   getItem('触达', '5', <img src={pchuda} alt="触达" />),
-//   getItem('培育', '6', <img src={pchuda} alt="培育" />),
-//   getItem('报表', '7', <img src={pstatement} alt="报表" />),
-//   getItem('管理', '8', <img src={pchuda} alt="管理" />),
-// ]
-
 const items2: MenuProps['items'] = [
   UserOutlined,
   LaptopOutlined,
@@ -77,6 +43,7 @@ const LayoutHome = () => {
   const [eitem, setEitem] = useState('') //设置次导航栏
   const [sitem, setSitem] = useState('') //设置具体导航栏
   const { menus, getMenus } = useMenus()
+  const [color, setColor] = useState(true)
   const items = menus.map((item: any) => {
     return {
       ...item,
@@ -86,14 +53,11 @@ const LayoutHome = () => {
   })
   useEffect(() => {
     getMenus() //获取服务器中menus数据
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  console.log('test-->', menus)
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Header
-        className={styles.header}
-        style={{ position: 'fixed', zIndex: 1, width: '100%' }}
-      >
+      <Header className={styles.header} style={{ zIndex: 1, width: '100%' }}>
         <img src={logo} alt="logo" />
         <div className={styles.headerRight}>
           <Input
@@ -128,16 +92,8 @@ const LayoutHome = () => {
           </div>
         </div>
       </Header>
-      <Layout style={{ marginTop: '64px' }} className={styles.main}>
-        <Sider
-          className={styles.sider}
-          collapsed={collapsed}
-          style={{
-            position: 'fixed',
-            left: 0,
-            bottom: 0,
-          }}
-        >
+      <Layout className={styles.main}>
+        <Sider className={styles.sider} collapsed={collapsed}>
           <Menu
             className={styles.siderMenu}
             mode="inline"
@@ -150,13 +106,24 @@ const LayoutHome = () => {
               setPitem(e.key)
             }}
           />
-          <button
+          <IconFont
+            style={
+              color
+                ? { fontSize: '20px' }
+                : { fontSize: '20px', color: '#4687F4' }
+            }
+            type="icon-a-zuosuojin3x"
+            className={styles.showMenus}
             onClick={() => {
               setCollapsed(!collapsed)
             }}
-          >
-            <IconFont type="icon-a-zuosuojin3x" />
-          </button>
+            onMouseOver={() => {
+              setColor(false)
+            }}
+            onMouseOut={() => {
+              setColor(true)
+            }}
+          />
         </Sider>
         <Content className={styles.content}>
           <Sider width={200} className="site-layout-background">
