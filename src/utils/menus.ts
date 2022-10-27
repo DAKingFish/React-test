@@ -9,7 +9,7 @@ export function useMenus() {
   const [menus, setMenus] = useState([])
   const getMenus = () => {
     axios
-      .get('http://1.15.184.206:8360/server/online/jinyuan/menus')
+      .get('http://1.15.184.206:8361/jinyuan/menus')
       .then(function (response) {
         setMenus(response.data.data)
       })

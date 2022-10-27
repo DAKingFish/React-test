@@ -154,6 +154,7 @@ const LayoutHome = () => {
                 padding: 24,
                 margin: 0,
                 minHeight: 280,
+                backgroundColor: '#fff',
               }}
             >
               Content

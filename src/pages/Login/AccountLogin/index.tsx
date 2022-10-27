@@ -33,14 +33,14 @@ export default function AccountLogin(props: any) {
   } */
   const onFinishAc = async (values: any) => {
     const res: any = await login(values)
-    console.log('res->', res.data[0])
+    console.log('res->', res.data)
     if (
-      res.data[0].phonenumber === Number(values.acphonenumber) &&
-      res.data[0].password === Number(values.password)
+      res.data.phonenumber === Number(values.acphonenumber) &&
+      res.data.password === Number(values.password)
     ) {
       message.success('登录成功')
       try {
-        localStorage.setItem('user_token', res.data[0].token) //自建服务器要给token
+        localStorage.setItem('user_token', res.data.token) //自建服务器要给token
         //props.history.push('/h')  我的app页面没有加history属性
         window.location.href = '/h'
       } catch (error) {
