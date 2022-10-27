@@ -11,6 +11,8 @@ import {
 import type { CheckboxChangeEvent } from 'antd/es/checkbox'
 import { useEffect, useState } from 'react'
 import { login } from '@/api/use'
+import instance from '@/utils/request'
+import { setToken } from '@/utils/token'
 import eye from '@/assets/images/eye.png'
 import eyeclose from '@/assets/images/eye-close.png'
 
@@ -32,7 +34,8 @@ export default function AccountLogin(props: any) {
     }
   } */
   const onFinishAc = async (values: any) => {
-    const res: any = await login(values)
+    //const res: any = await login(values)
+    const res: any = await instance.post('/login', { values })
     console.log('res->', res.data)
     if (
       res.data.phonenumber === Number(values.acphonenumber) &&
@@ -40,7 +43,7 @@ export default function AccountLogin(props: any) {
     ) {
       message.success('登录成功')
       try {
-        localStorage.setItem('user_token', res.data.token) //自建服务器要给token
+        setToken(res.data.token) //自建服务器要给token
         //props.history.push('/h')  我的app页面没有加history属性
         window.location.href = '/h'
       } catch (error) {
