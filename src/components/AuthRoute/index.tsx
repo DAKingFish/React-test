@@ -1,14 +1,34 @@
 // hasToken 判断是否有token
-import { isAuth } from '@/utils'
-import { Route, Redirect, RouteProps } from 'react-router-dom'
+// import { isAuth } from '@/utils'
+// import { Route, Redirect } from 'react-router-dom'
+// export const AuthRoute = ({ children }: any) => {
+//   if (isAuth()) {
+//     return <Route>
+//       {children}
+//     </Route>
+//   } else {
+//     return <Redirect
+//       to={{
+//         pathname: '/login',
+//         state: {
+//           // 传入当前游览页面的路径
+//           from: window.location.pathname,
+//         },
+//       }}
+//     />
+//   }
+// }
 
-export const AuthRoute = ({ children, ...rest }: RouteProps) => {
+// hasToken 判断是否有token
+import { isAuth } from '@/utils'
+import { Route, Redirect } from 'react-router-dom'
+
+export const AuthRoute = ({ children, ...rest }: any) => {
   return (
     <Route
       {...rest}
       render={(props) => {
         if (isAuth()) {
-          // children 与vue中插槽类似是Route包裹的内容
           return children
         }
         return (
@@ -26,3 +46,12 @@ export const AuthRoute = ({ children, ...rest }: RouteProps) => {
     />
   )
 }
+
+
+// const App = ({age}) => {
+//   return 12
+// }
+
+// <App age={12} />
+
+// App({age: 12})

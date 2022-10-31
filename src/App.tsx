@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.scss'
 //导入路由组件
 import { Router, Route, Switch, Redirect } from 'react-router-dom'
@@ -15,14 +14,20 @@ function App() {
     <Router history={history}>
       <div className="App">
         <Switch>
-          <Redirect exact from="/" to="/home" />
-          <Route path="/home" component={Layout} />
-          <Route path="/login" component={Login} />
-          <Route path="/demo" component={Demo} />
-          <Route path="/test" component={Homework} />
-          <Route path="/h" component={Layout} />
-          <AuthRoute path="/h" component={Layout}></AuthRoute>
-
+          {/* 重定向跳转 */}
+          <Redirect exact from="/" to="/h" />
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/demo">
+            <Demo />
+          </Route>
+          <Route path="/test">
+            <Homework />
+          </Route>
+          <AuthRoute path="/h">
+            <Layout />
+          </AuthRoute>
           {/* 增加一个404 */}
           <Route component={NotFound} />
         </Switch>
