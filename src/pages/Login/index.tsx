@@ -7,7 +7,7 @@ import MessageCodeLogin from './MessageCodeLogin'
 import Register from './Register'
 import QRLogin from './QRLogin'
 import Forget from './Forget'
-export default function Login() {
+export default function Login(props: any) {
   const [loginMethod, setLoginMethod] = useState('aclogin')
   const [moudle, setMoudle] = useState('account')
   const [active, setActive] = useState(true)
@@ -34,7 +34,7 @@ export default function Login() {
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo)
   }
-  const [form] = Form.useForm()
+  const [form] = Form.useForm() //将form实例挂载到form上
   console.log(form)
   return (
     <div>
@@ -104,7 +104,7 @@ export default function Login() {
                     </div>
                   </div>
                   {active ? (
-                    <AccountLogin setM={setMoudle} />
+                    <AccountLogin setM={setMoudle} history={props.history} />
                   ) : (
                     <MessageCodeLogin />
                   )}

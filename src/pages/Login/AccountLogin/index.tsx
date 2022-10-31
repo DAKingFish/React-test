@@ -15,40 +15,25 @@ import instance from '@/utils/request'
 import { setToken } from '@/utils/token'
 import eye from '@/assets/images/eye.png'
 import eyeclose from '@/assets/images/eye-close.png'
-
+import { useHistory } from 'react-router-dom' //history
 console.log(styles)
 export default function AccountLogin(props: any) {
   const [loginerr, setLoginErr] = useState(false) //是否同意协议的tooltip的判断
   const [value, setValue] = useState(false) //是否同意协议
-  const [form] = Form.useForm()
+  const [form] = Form.useForm() //antd 一个钩子,或form表单的数据
   console.log(form)
-  /*  const onFinishAc = async (values: any) => {
-    const res = await login(values)
-    if(values.)
-    try {
-      localStorage.setItem('user_token', res.data.token) //自建服务器要给token
-      props.history.push('/h')
-      message.success('登录成功')
-    } catch (err) {
-      message.error('登录失败')
-    }
-  } */
+  const history = useHistory()
   const onFinishAc = async (values: any) => {
     //const res: any = await login(values)
-    const res: any = await instance.post('/login', { values })
+    const res: any = await instance.post('/login', {
+      phonenumber: Number(values.acphonenumber),
+      password: String(values.password),
+    })
     console.log('res->', res.data)
-    if (
-      res.data.phonenumber === Number(values.acphonenumber) &&
-      res.data.password === Number(values.password)
-    ) {
+    if (res.code === 200) {
       message.success('登录成功')
-      try {
-        setToken(res.data.token) //自建服务器要给token
-        //props.history.push('/h')  我的app页面没有加history属性
-        window.location.href = '/h'
-      } catch (error) {
-        message.error('成功未执行')
-      }
+      setToken(res.data.token) //自建服务器要给token
+      history.push('/h') //我的app页面没有加history属性
     } else {
       message.error('登录失败')
     }
