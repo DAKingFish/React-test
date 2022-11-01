@@ -1,0 +1,134 @@
+.header {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+
+  img {
+    width: 232px;
+    height: 64px;
+  }
+
+  .headerRight {
+    width: 100%;
+    display: flex;
+
+    .headerInput {
+      width: 400px;
+      height: 36px;
+      margin: 14px 16px;
+    }
+
+    .headerMenu {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      flex: 1;
+      margin-right: 48px;
+
+      div {
+        display: flex;
+        align-items: center;
+        margin-left: 24px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        font-size: 16px;
+        color: #111a34;
+        text-align: right;
+        cursor: pointer;
+
+        span {
+          margin-right: 11px;
+
+          .pLogo {
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            margin-right: -6px;
+            vertical-align: text-bottom;
+            border: 0.5px solid #211bd6;
+          }
+        }
+
+        :global(.ant-badge) {
+          span {
+            margin-right: 0px;
+          }
+
+          img {
+            width: 24px;
+            margin-right: 8px;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+
+  .sider {
+    position: relative !important;
+    width: 140px !important;
+    min-width: 100px !important;
+    max-width: 140px !important;
+
+    .siderMenu {
+      background-color: #eaf2ff;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      font-size: 16px;
+      color: #414a64;
+
+      :global(.ant-menu-item-selected) {
+        background-color: #fff;
+      }
+
+      :global(.ant-menu-item) {
+        padding-left: 20px;
+
+        img {
+          vertical-align: middle;
+        }
+
+        span {
+          opacity: 1;
+        }
+      }
+    }
+
+    .showMenus {
+      position: absolute;
+      left: 20px;
+      bottom: 16px;
+      width: 20px;
+      height: 20px;
+      background-color: #eaf2ff;
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 100% !important;
+    display: flex;
+    flex: 1;
+
+    .contentTitle {
+      height: 56px;
+      background-color: #fff;
+      text-align: center;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      font-size: 20px;
+      color: #111A34;
+      line-height: 56px;
+    }
+  }
+}

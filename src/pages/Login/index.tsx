@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, ConfigProvider, Tooltip } from 'antd'
+import { Form } from 'antd'
 import type { CheckboxChangeEvent } from 'antd/es/checkbox'
 import styles from './index.module.scss'
 import { useEffect, useState } from 'react'
@@ -34,7 +34,7 @@ export default function Login(props: any) {
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo)
   }
-  const [form] = Form.useForm() //将form实例挂载到form上
+  const [form] = Form.useForm() //将form实例挂载到form上 ,antd自带封装hook
   console.log(form)
   return (
     <div>
